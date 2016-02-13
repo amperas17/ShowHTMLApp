@@ -1,0 +1,93 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:id="@+id/rlMain"
+    >
+
+    <EditText
+        android:id="@+id/etInputPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://career.ru/vacancy/15972013"
+        android:inputType="textUri"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+
+
+        />
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/etInputPath">
+
+        <Button
+            android:id="@+id/btAsyncTask"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Async Task"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            />
+        <Button
+            android:id="@+id/btService"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Intent Service"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <Button
+            android:id="@+id/btWebView"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Web View"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wvContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llButtons"
+        android:layout_margin="10dp"
+        android:visibility="invisible">
+
+    </WebView>
+
+    <ScrollView
+        android:id="@+id/svTvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llButtons"
+        android:layout_margin="10dp"
+        >
+
+        <TextView android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
